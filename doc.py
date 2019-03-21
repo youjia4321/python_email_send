@@ -9,7 +9,7 @@ Options:
     -c, --content==<content>    邮件内容
 
 Example:
-    send_email.py 10407123@qq.com 3293451291@qq.com 'hello,send by python'
+    send_email.py -f10407123@qq.com -t3293451291@qq.com -c'hello,send by python'
 """
 from docopt import docopt
 import smtplib
