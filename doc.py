@@ -31,7 +31,7 @@ print ('内容>',arguments['--content'])
 # 第三方 SMTP 服务
 mail_host = "smtp.qq.com"
 mail_user = arguments['--from']  # 登录的邮箱
-mail_password = 'quyrkztsdifecaaj'  # 打开qq的smtp服务后的授权码
+mail_password = 'xxxxxxxxxxx'  # 打开qq的smtp服务后的授权码
 
 #处理选项 转换成list的格式(我上面没定义选项)
 options=[]
@@ -39,7 +39,7 @@ for key in arguments:
     if arguments[key]==True:
         options.append(key)
 
-sender = formataddr(["仙女商城", arguments['--from']])
+sender = formataddr(["nagashi", arguments['--from']])
 
 content = arguments['--content']
 message = MIMEText(content, 'plain', 'utf-8')
@@ -48,7 +48,6 @@ message['To'] = arguments['--to']
 
 subject = 'python email'
 message['Subject'] = Header(subject, 'utf-8')
-
 
 
 smtp = smtplib.SMTP()  # smtp默认端口为25
